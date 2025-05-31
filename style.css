@@ -3,29 +3,53 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
+  
 }
 
 h1, h2, h3, h4, h5, h6, span {
-    font-family: 'Montserrat Alternates', sans-serif;
     color: #242424;
     text-align: center;
     line-height: 1.25;
 }
 
+h1 {
+    font-size: 36px;
+}
 p { 
     line-height: 1.5;
     font-size: 16px;
 }
 
+.row {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.colored-text {
+    color: coral 
+}
+
 /* NAV BAR */
+
 nav {
     height: 100px;
+    width: 100%;
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 12px;
 }
 
 .nav-links {
@@ -34,13 +58,13 @@ nav {
     list-style: none;
     gap: 16px;
     font-weight: 700;
+    font-size: 16px;
 }
 
 .nav-button {
-    background-color: rgb(255, 185, 87);
+    background-color: coral;
     padding: 8px 20px;
     border-radius: 50px;
-
 }
 
 .nav-button:hover {
@@ -51,17 +75,55 @@ nav {
 .personal-logo {
     font-size: 24px;
     font-weight: bold;
-    font-family: 'Montserrat Alternates', sans-serif; 
-    color: rgb(255, 165, 0)
+    color: coral;
     margin: 0 12px;
 }
 
 a {
     text-decoration: none;
     color: #242424;
-    font-family: 'Roboto', sans-serif;
 }
 
-a:hover {
-    color: #1363b8;
+/* ABOUT ME */
+
+#about-me {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f5effa;
+}
+
+.about-me__info--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-me__info--image--mask {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 18px 16px rgba(0, 0, 0, 0.16);
+    margin-bottom: 28px;    
+}
+
+.Stephanie {
+    width: 100%;
+
+}
+
+.about-me__info--title {
+    margin-bottom: 16px;
+}
+
+.about-me__info--paragraph {
+    margin-bottom: 28px;
+}
+
+.about-me__link {
+    font-size: 50px;
 }
