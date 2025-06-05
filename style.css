@@ -291,5 +291,51 @@ ul {
     list-style: none;
 }
 .project {
-    margin-bottom: 24px;
+    margin-bottom: 135px;
+}
+.project:last-child {
+    margin-bottom: 40px;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #000000;
+    color: #f5effa;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer__social-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 32px;
+    margin-bottom: 20px;
+}
+
+.footer__logo {
+    width: 100px;
+    height: 100px;
+}
+
+.footer__row {
+    padding: 8% 0;
+
+}
+.footer-links,
+.footer__logo--popper {
+    color: #f5effa;
+}
+.footer__logo--container {
+    margin-bottom: 20px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+.footer__logo--popper {
+    position: absolute;
+    right: 0;
+}
+.footer__anchor {
+    position: relative;
 }
