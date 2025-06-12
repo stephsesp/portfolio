@@ -28,11 +28,27 @@ p {
     font-size: 16px;
 }
 
+a {
+    text-decoration: none;
+    position: relative;
+}
+ul {
+    list-style: none;
+}
+
+ul {
+    list-style: none;
+}
+
+i:hover {
+    opacity: 0.7;
+}
+
 .row {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    padding 0 12px;
+    padding: 0 12px;
 }
 
 .container {
@@ -61,11 +77,6 @@ section:nth-child(odd) {
 .section-title {
     margin-bottom: 20px;
 
-}
-
-a {
-    text-decoration: none;
-    position: relative;
 }
 
 .link__hover-effect:after {
@@ -168,7 +179,6 @@ a {
 
 .Stephanie {
     width: 100%;
-
 }
 
 .about-me__info--title {
@@ -219,8 +229,8 @@ a {
 
 }
 .language:hover .language__img {
-    filter: brightness(0.8);
-    opacity: .86
+    filter: brightness(80%);
+    opacity: .86;
     transform: scale(0.9);
 }
     
@@ -249,6 +259,14 @@ a {
 
 /* PROJECTS */
 
+.project {
+    margin-bottom: 135px;
+}
+
+.project:last-child {
+    margin-bottom: 40px;
+}
+
 .project__img {
     width: 100%;
     transition: all 500ms ease;
@@ -256,9 +274,6 @@ a {
 
 .project__img--wrapper {
     display: flex;
-    width: 100%;
-    max-width: 650px;
-    margin: 0 auto;
     box-shadow: 0 20px 80px rgba(0, 0, 0, 0.45);
     border-radius: 8px;
     overflow: hidden;
@@ -273,11 +288,13 @@ a {
     width: 100%;
     background-color: #1c1d25;
     opacity: 0;
-    transition: opacity 450ms ease;
+    transition: all 450ms ease;
     z-index: 2;
+    transform: translateY(100%);
 
 }
 .project:hover .project__img--wrapper:before {
+    transform: scale(1.07);
     opacity: 0.7;
 }
 .project:hover .project__img {
@@ -286,7 +303,7 @@ a {
 }
 .project:hover .project__description {
     opacity: 1;
-    transform: translateY(10%)
+    transform: translateY(-50%)
 }
 
 .projects__list {
@@ -295,13 +312,13 @@ a {
 
 .project__description {
     position: absolute;
-    top: 25%;
-    left: 50px;
-    transform: translateY(100%)
+    top: 50%;
+    left: 90px;
+    transform: translateY(100%);
     max-width: 550px;
     z-index: 3;
     opacity: 0;
-    transition: opacity 450ms, transform 450ms;
+    transition: transform 450ms, opacity 300ms;
 }
 
 .project__description--title {
@@ -323,16 +340,6 @@ a {
 .project__description--link {
     text-align: left;
     color: #f5effa;
-}
-
-ul {
-    list-style: none;
-}
-.project {
-    margin-bottom: 135px;
-}
-.project:last-child {
-    margin-bottom: 40px;
 }
 
 /* FOOTER */
@@ -366,11 +373,7 @@ footer {
 .footer__logo--popper {
     color: #f5effa;
 }
-.footer__logo--container {
-    margin-bottom: 20px;
-    padding-top: 0px;
-    margin-top: 0px;
-}
+
 .footer__logo--popper {
     position: absolute;
     right: 0;
@@ -397,7 +400,7 @@ footer {
 @media (max-width: 768px) {
 
     nav {
-        padding-left: 60px;
+        height: 68px;
     }
 
     h1 {
@@ -415,22 +418,13 @@ footer {
     .project__description--paragraph {
         font-size: 14px;
     }
-    
-    .nav-links {
-        padding-right: 64px; 
-    }
-
-    .about-me__img--container {
-        max-width: 600px;
-    
-    }
 }
 
 /* SMALL PHONES */
 
 @media (max-width: 480px) {
 
-    .nav-item { 
+    .nav-links:not(:last-child) { 
         display: none;
     }
 
@@ -443,7 +437,7 @@ footer {
     .project__description {
         left: 20px;
     }
-    .project__description--paragraph, .project__description--subtitle {
+    .project__description--paragraph,  {
         display: none;
     }
     .project__description--links {
