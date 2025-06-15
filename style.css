@@ -31,7 +31,10 @@ p {
 a {
     text-decoration: none;
     position: relative;
+    transition: opacity 300ms ease;
 }
+
+
 ul {
     list-style: none;
 }
@@ -174,25 +177,68 @@ a {
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 18px 16px rgba(0, 0, 0, 0.16);
-    margin-bottom: 28px;    
+    margin-bottom: 28px; 
+    animation: animate-profile-picture 800ms 200ms backwards;   
+
+}
+
+@keyframes animate-profile-picture {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .Stephanie {
     width: 100%;
+    animation: fade-in 6500ms 400ms backwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .about-me__info--title {
     margin-bottom: 16px;
+    animation: fade-up 650ms 800ms backwards;
 }
 
 .about-me__info--paragraph {
     margin-bottom: 28px;
+    animation: fade-up 650ms 800ms backwards;
 }
 
 .about-me__link {
     font-size: 20px;
     padding: 0 16px;
+    animation: fade-up 650ms 800ms backwards;
 }
+
+.about-me__links {
+    animation: fade-up 650ms 800ms backwards;
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .about-me__img--container {
     flex: 1;
     display: flex;
@@ -418,34 +464,51 @@ footer {
     .project__description--paragraph {
         font-size: 14px;
     }
+
+    .project__description {
+        left: 30px;
+        padding-right: 30px;
+    }
 }
 
 /* SMALL PHONES */
 
 @media (max-width: 480px) {
 
-    .nav-links:not(:last-child) { 
+    .nav-item { 
         display: none;
     }
 
-    .about-me__info--paragraph {
-        font-size: 16px;
+    .project__img--wrapper {
+        border-radius: 0;
     }
-    .projects__list {
-        padding: 0 20px 0 20px;
-    }
+
     .project__description {
-        left: 20px;
+        left: 0;
+        padding: 0;
+        width: 100%;
     }
-    .project__description--paragraph,  {
+
+    .project__description--paragraph {
         display: none;
     }
-    .project__description--links {
-        padding: 10px 40px 0 50px;
+
+    .project__description--link {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
     }
-     
-    .project__description {
-        left: 140px;
-        bottom: 30px;
+
+    .project__description--title {
+        font-size: 32px;
+        line-height: 1;
+        text-align: center;
     }
-}
+
+    .project__description--subtitle {
+        text-align: center;
+        margin: 12px 0;
+    }
+
+    }
+    
