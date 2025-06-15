@@ -196,7 +196,6 @@ a {
 
 .Stephanie {
     width: 100%;
-    animation: fade-in 6500ms 400ms backwards;
 }
 
 @keyframes fade-in {
@@ -493,7 +492,7 @@ footer {
         display: none;
     }
 
-    .project__description--link {
+    .project__description--links {
         display: flex;
         justify-content: center;
         padding: 10px;
